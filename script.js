@@ -1,11 +1,14 @@
 const button = document.querySelector('#solve');
-var a = document.querySelector('#aInput');
-var b = document.querySelector('#bInput');
-var c = document.querySelector('#cInput');
+var a = document.querySelector('#aInput').value;
+var b = document.querySelector('#bInput').value;
+var c = document.querySelector('#cInput').value;
 var result1;
 var result2;
 
 function solveEquation() {
+  var a = document.querySelector('#aInput').value;
+  var b = document.querySelector('#bInput').value;
+  var c = document.querySelector('#cInput').value;
   a = parseFloat(a);
   b = parseFloat(b);
   c = parseFloat(c);
@@ -16,3 +19,4 @@ function solveEquation() {
 }
 
 button.addEventListener('click', solveEquation, "false");
+
