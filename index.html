@@ -3,7 +3,7 @@
   <head>
     <title>Quadratic Equation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="charles_hughes.js">
+    <script src="script.js" async></script>
     <meta charset="utf-8">
   </head>
   <body>
@@ -17,14 +17,15 @@
             <th>
               <input type = "button"
                      id = "solve"
-                     value = "Solve">
+                     value = "Solve"
+                     onclick = "solveEquation()">
             </th>
             </thead>
         <tbody>
         <tr>
           <td>a value</td>
           <td>b value</td>
-          <td>a value</td>
+          <td>c value</td>
           <td>X1</td>
           <td>X2</td>
         </tr>
@@ -40,12 +41,17 @@
         <td><input type = "text"
                  id = "cInput"
                  value = "" /></td>
-        <td></td>
-        <td></td>
+        <td>
+        <p class = x1></p>
+        </td>
+        <td>
+        <p class = x2></p>
+        </td>
       </tr>
         </tbody>
       </table>
      </div>
   </body>
     </html>
+
     
