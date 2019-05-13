@@ -13,12 +13,16 @@
     <div>
       <table class="table">
           <thead>
-            <th>Quadratic Equation:<br>Ax^2+Bx+c</th>
+            <th>Quadratic Equation:<br>Ax<sup>2</sup>+Bx+C</th>
             <th>
               <input type = "button"
                      id = "solve"
-                     value = "Solve"
-                     onclick = "solveEquation()">
+                     value = "Solve">
+            </th>
+            <th>
+              <input type = "button"
+                     id = "reset"
+                     value = "Reset">
             </th>
             </thead>
         <tbody>
@@ -48,10 +52,23 @@
         <p class = x2></p>
         </td>
       </tr>
+      <tr>
+        <td>Vertex X coordinate</td>
+        <td>Vertex Y coordinate</td>
+      </tr>
+      <tr>
+        <td>
+          <input type = "text"
+                 id = "xVertexValue"
+                 value = "" />
+        <td>
+          <input type = "text"
+                  id = "yVertexValue"
+                  value = "" />
+      </tr>
         </tbody>
       </table>
      </div>
   </body>
     </html>
-
     
