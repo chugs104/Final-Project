@@ -54,3 +54,22 @@ function vertexPoints() {
     document.querySelector(".yVertexValue").innerHTML = yVertex.toFixed(5);
 }
 
+function equationGenerator() {
+  var aGiven = Math.random() * ((10 - 1) + 1) + 1;
+  var bGiven = Math.random() * ((22 - 11) + 1) + 11;
+  var cGiven = Math.random() * ((-10 - (-60)) + 1) + (-60);
+    document.querySelector(".aGiven").innerHTML = aGiven;
+    document.querySelector(".bGiven").innerHTML = bGiven;
+    document.querySelector(".cGiven").innerHTML = cGiven;
+}
+
+function resetQuiz() {
+  document.querySelector(".aGiven").innerHTML = ""
+  document.querySelector(".bGiven").innerHTML = ""
+  document.querySelector(".cGiven").value = ""
+  document.querySelector("#X1").value = ""
+  document.querySelector("#X2").value = ""
+  document.querySelector("#xVertexQuiz").innerHTML = ""
+  document.querySelector("#yVertexQuiz").innerHTML = ""
+}
+
