@@ -4,6 +4,7 @@
     <title>Quadratic Equation</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
     <meta charset="utf-8">
   </head>
   <body>
@@ -11,7 +12,7 @@
       <p>Input your a, b, and c values to solve the equation!</p>
     </div>
     <div>
-      <table class="table">
+      <table class = "table">
           <thead>
             <th>Quadratic Equation:<br>Ax<sup>2</sup>+Bx+C</th>
             <th>
@@ -37,14 +38,16 @@
         <td>
           <input type = "text"
                  id = "aInput"
-                 value = "" />
+                 value = "" >
         </td>
         <td><input type = "text"
                  id = "bInput"
-                 value = "" /></td>
+                 value = "" >
+        </td>
         <td><input type = "text"
                  id = "cInput"
-                 value = "" /></td>
+                 value = "" >
+        </td>
         <td>
         <p class = x1></p>
         </td>
@@ -65,6 +68,75 @@
         </td>
       </tr>
         </tbody>
+      </table>
+      <br>
+      <br>
+
+
+
+      <p>Now test your skills and find the X-intercepts and coordinates of the Vertex yourself!</p>
+      <p>Input your answers to see if you're right.</p>
+      <table class = "quiz">
+        <thead>
+          <th>Quadratic Equation:<br>Ax<sup>2</sup>+Bx+C</th>
+          <th>
+            <input type = "button"
+                   id = "check"
+                   value = "Check">
+          </th>
+          <th>
+            <input type = "button"
+                   id = "reset2"
+                   value = "Reset">
+          </th>
+          </thead>
+      <tbody>
+      <tr>
+        <td>a value</td>
+        <td>b value</td>
+        <td>c value</td>
+        <td>X1</td>
+        <td>X2</td>
+      </tr>
+    <tr>
+      <td>
+        <p class = "aGiven"></p>
+      </td>
+      <td>
+        <p class = "bGiven"></p>
+      </td>
+      <td>
+        <p class = "cGiven"></p>
+      </td>
+      <td>
+        <input type = "text"
+              id = "X1"
+              value = "" >
+      </td>
+      <td>
+        <input type = "text"
+              id = "X2"
+              value = "" >
+      </td>
+    </tr>
+    <tr>
+      <td>Vertex X coordinate</td>
+      <td>Vertex Y coordinate</td>
+    </tr>
+    <tr>
+      <td>
+        <input type = "text"
+               id = "xVertexQuiz"
+               value = "">
+      </td>
+      <td>
+        <input type = "text"
+               id = "yVertexQuiz"
+               value = "">
+      </td>
+    </tr>
+      </tbody>
+      </table>
       </table>
      </div>
   </body>
