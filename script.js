@@ -1,8 +1,12 @@
+//All the variables are defined here
 const button = document.querySelector('#solve');
 const button2 = document.querySelector('#reset');
 const button3 = document.querySelector('#check');
 const button4 = document.querySelector("#reset2");
 const button5 = document.querySelector('#startQuiz');
+var a;
+var b;
+var c;
 var result1;
 var result2;
 var xVertex;
@@ -21,9 +25,9 @@ var ansVertYRounded;
 
 //This function is the basic function that solves the quadratic and gives the answers for the 4 result variables
 function solveEquation() {
-  var a = document.querySelector('#aInput').value;
-  var b = document.querySelector('#bInput').value;
-  var c = document.querySelector('#cInput').value;
+  a = document.querySelector('#aInput').value;
+  b = document.querySelector('#bInput').value;
+  c = document.querySelector('#cInput').value;
   a = parseFloat(a);
   b = parseFloat(b);
   c = parseFloat(c);
@@ -77,6 +81,7 @@ function vertexPoints() {
     document.querySelector(".yVertexValue").innerHTML = yVertex.toFixed(5);
 }
 
+//This function randomly selects poosible integers to make a quadratic equation
 function equationGenerator() {
   aGiven = Math.floor((Math.random() * ((10 - 1) + 1)) + 1);
   bGiven = Math.floor((Math.random() * ((22 - 11) + 1)) + 11);
@@ -86,15 +91,19 @@ function equationGenerator() {
     document.querySelector(".cGiven").innerHTML = cGiven;
 }
 
+//This function checks the answers given by the quiz taker and sees if they are correct or not
 function checkAnswers() {
-  ansX1 = (-1 * bGiven + Math.sqrt(Math.pow(bGiven, 2) - (4 * aGiven * cGiven)) / (2 * aGiven));
-  ansX2 = (-1 * bGiven - Math.sqrt(Math.pow(bGiven, 2) - (4 * aGiven * cGiven)) / (2 * aGiven));
+  aGiven = parseFloat(aGiven);
+  bGiven = parseFloat(bGiven);
+  cGiven = parseFloat(cGiven);
+  ansX1 = (-1 * bGiven + Math.sqrt(Math.pow(bGiven, 2) - (4 * aGiven * cGiven))) / (2 * aGiven);
+  ansX2 = (-1 * bGiven - Math.sqrt(Math.pow(bGiven, 2) - (4 * aGiven * cGiven))) / (2 * aGiven);
   ansX1Rounded = Math.round(ansX1 * 100)/100;
   ansX2Rounded = Math.round(ansX2 * 100)/100;
   ansVertX = (-1 * bGiven / (2 * aGiven));
   ansVertY = ((aGiven * (xVertex * xVertex)) + (bGiven * xVertex) + (1 * cGiven));
   ansVertXRounded = Math.round(ansVertX * 100)/100;
-  ansVertYRounded = Math.round(ansvertY * 100)/100;
+  ansVertYRounded = Math.round(ansVertY * 100)/100;
   if (ansX1Rounded == X1.value) {
     document.querySelector("#X1").value = "Correct"
   }
@@ -121,6 +130,7 @@ function checkAnswers() {
   }
 }
 
+//This function links to the button that resets the variables in the quiz
 function resetQuiz() {
   document.querySelector(".aGiven").innerHTML = ""
   document.querySelector(".bGiven").innerHTML = ""
